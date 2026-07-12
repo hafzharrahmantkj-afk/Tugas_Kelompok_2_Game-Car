@@ -308,7 +308,7 @@ while running:
         keys = pygame.key.get_pressed()
 
         # Gas (Accelerate)
-        if (keys[pygame.K_UP]or keys[pygame.K_w]):
+        if [pygame.K_UP]:
             speed += ACCELERATION
             if speed > MAX_SPEED:
                 speed = MAX_SPEED
@@ -318,7 +318,7 @@ while running:
                 speed = MIN_SPEED
 
         # Rem (Brake)
-        if (keys[pygame.K_DOWN]or keys[pygame.K_s]):
+        if [pygame.K_DOWN]:
             speed -= 0.4
             if speed < 2:
                 speed = 2
